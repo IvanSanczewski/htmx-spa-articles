@@ -28,7 +28,9 @@ router.post('/articles', (req, res) => {
   }
   articles.push(article);
 
-  res.render('partials/list', {articles});
+  setTimeout(() => {
+   res.render('partials/list', {articles});
+  }, 3000)
 });
 
 export default router;
